@@ -92,12 +92,13 @@ h3 {
     flex-direction: column;
     justify-content: space-between;
     overflow-y: scroll;
+    margin-bottom: 110px;
 }
 
 .card-with-no-question {
     color: black;
     background-color: #FFFFFF;
-    height: 150px;
+    height: 66px;
     width: 300px;
     padding: 16px;
     margin-bottom: 26px;
@@ -130,7 +131,7 @@ h3 {
 .card-with-question {
     background-color: #FFFFD4;
     color: black;
-    height: 150px;
+    height: 130px;
     width: 300px;
     padding: 16px;
     margin-bottom: 26px;
@@ -226,8 +227,22 @@ h3 {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    position: fixed;
+    bottom: 0;
 }
-.bottom > div:nth-child(2){
+.bottom h3, .bottom h2{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.bottom > *{
+    margin-bottom: 10px;
+}
+.bottom > div:nth-child(1){
+    display: flex;
+}
+.result-Icons{
     display: flex;
 }
 
