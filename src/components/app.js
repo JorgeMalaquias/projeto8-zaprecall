@@ -3,7 +3,7 @@ import Screen2 from "./screen2";
 
 const deck = [{ question: "quem é?", answer: "sou eu, bola de fogo" },
 { question: "quem é?", answer: "sou eu, bola de fogo" },
-{ question: "tyh5yhj5yhj564yh65h56rth4r5hj4hj46?", answer: "sou eu, bola de fogo" },
+{ question: "sou eu?", answer: "sou eu, bola de fogo" },
 { question: "quem é?", answer: "sou eu, bola de fogo" },
 { question: "quem é?", answer: "sou eu, bola de fogo" },
 { question: "quem é?", answer: "sou eu, bola de fogo" },

@@ -1,7 +1,19 @@
 import React from 'react';
+import InitialCard from './initialCard';
 
 
-
+function AnswerCard(props) {
+    return (
+        <div className="card-with-answer">
+            <div>{props.answer}</div>
+            <div>
+                <div className="user-aswer red">Não lembrei</div>
+                <div className="user-aswer orange">Quase não lembrei</div>
+                <div className="user-aswer green">Zap!</div>
+            </div>
+        </div>
+    );
+}
 function QuestionCard(props) {
     return (
         <div className="card-with-question">
@@ -12,21 +24,15 @@ function QuestionCard(props) {
         </div>
     );
 }
-function InitialCard(props) {
-    return (
-        <div className="card-with-no-question">
-            <h3>Pergunta {props.number}</h3>
-            <ion-icon name="play-outline" onClick={()=>props.setSelected(1)}></ion-icon>
-        </div>
-    );
-}
+
 
 export default function Card(props) {
+    const [answerStatus,setAnswerStatus]= React.useState(1);
     const [selected, setSelected] = React.useState(0);
     if(selected===0){
         return(
             <>
-            <InitialCard number={props.number} setSelected={setSelected}/>
+            <InitialCard number={props.number} setSelected={setSelected} answerStatus={answerStatus}/>
             </>
         );
     }
@@ -37,11 +43,11 @@ export default function Card(props) {
             </>
         );
     }
-    /*if(selected===2){
+    if(selected===2){
         return(
             <>
-            <AnswerCard question={props.question} setSelected={setSelected}/>
+            <AnswerCard answer={props.answer} setSelected={setSelected}/>
             </>
         );
-    }*/
+    }
 }
