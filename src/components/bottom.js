@@ -1,7 +1,7 @@
-export default function Bottom(){
+export default function Bottom(props){
     return(
         <div className="bottom">
-            <h2>0/4 CONCLUÍDOS</h2>
+            {props.children}
         </div>
     );
 }
